@@ -1,0 +1,37 @@
+:root {
+    --primary-color: #FFD365;
+    --primary-font-color: #0D0D0D;
+    --secondary-color: #A4822E;
+    --secondary-font-color: #FFFDF8;
+    --background-color: white;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: medium;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 32px;
+}
+
+h4 {
+    font-size: 24px;
+}
+
+h5 {
+    font-size: 20px;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
