@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "name": "Bubble sort",
+        "timeComplexity": {
+            "worstCase": "O(n^2)",
+            "averageCase": "O(n^2)",
+            "bestCase": "O(n)"
+        },
+        "source": "https://en.wikipedia.org/wiki/Bubble_sort"
+    },
+    {
+        "id": 2,
+        "name": "Insertion sort",
+        "timeComplexity": {
+            "worstCase": "O(n^2)",
+            "averageCase": "O(n^2)",
+            "bestCase": "O(n)"
+        },
+        "source": "https://en.wikipedia.org/wiki/Insertion_sort"
+    },
+    {
+        "id": 3,
+        "name": "Selection sort",
+        "timeComplexity": {
+            "worstCase": "O(n^2)",
+            "averageCase": "O(n^2)",
+            "bestCase": "O(n^2)"
+        },
+        "source": "https://en.wikipedia.org/wiki/Selection_sort"
+    },
+    {
+        "id": 4,
+        "name": "Merge sort",
+        "timeComplexity": {
+            "worstCase": "O(nlogn)",
+            "averageCase": "O(nlogn)",
+            "bestCase": "O(nlogn)"
+        },
+        "source": "https://en.wikipedia.org/wiki/Merge_sort"
+    },
+    {
+        "id": 5,
+        "name": "Heap sort",
+        "timeComplexity": {
+            "worstCase": "O(nlogn)",
+            "averageCase": "O(nlogn)",
+            "bestCase": "O(nlogn)"
+        },
+        "source": "https://en.wikipedia.org/wiki/Heapsort"
+    },
+    {
+        "id": 6,
+        "name": "Quick sort",
+        "timeComplexity": {
+            "worstCase": "O(n^2)",
+            "averageCase": "(nlogn)",
+            "bestCase": "O(nlogn)"
+        },
+        "source": "https://en.wikipedia.org/wiki/Quicksort"
+    }
+]

@@ -1,4 +1,4 @@
-function AlgorithmCard({ name, summary, avgTimeComplexity }) {
+function AlgorithmCard({ name, worstTimeComplexity, avgTimeComplexity, bestTimeComplexity }) {
     
     const cardStyle = {
         backgroundColor: "var(--primary-color)",
@@ -23,8 +23,9 @@ function AlgorithmCard({ name, summary, avgTimeComplexity }) {
         <div style={cardStyle}>
             <h3 style={nameStyle}>{name}</h3>
             <hr style={lineStyle} />
-            <p>{summary}</p>
+            <p>Worst Time Complexity {worstTimeComplexity}</p>
             <p>Average Time Complexity {avgTimeComplexity}</p>
+            <p>Best Time Complexity {bestTimeComplexity}</p>
         </div>
     );
 }

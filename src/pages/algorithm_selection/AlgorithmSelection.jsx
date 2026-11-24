@@ -8,34 +8,40 @@ function AlgorithmSelection() {
             <h2>Select Algorithm to Visualize</h2>
             <div className="algorithm-grid">
                 <AlgorithmCard 
-                    name="Bubble Sort" 
-                    summary="Compare current element to the next element, and swap if necessary"
+                    name="Bubble sort" 
+                    worstTimeComplexity="O(n^2)"
                     avgTimeComplexity="O(n^2)"
+                    bestTimeComplexity="O(n^2)"
                     />
                 <AlgorithmCard 
-                    name="Bubble Sort" 
-                    summary="Compare current element to the next element, and swap if necessary"
+                    name="Bubble sort" 
+                    worstTimeComplexity="O(n^2)"
                     avgTimeComplexity="O(n^2)"
+                    bestTimeComplexity="O(n^2)"
                     />
                 <AlgorithmCard 
-                    name="Bubble Sort" 
-                    summary="Compare current element to the next element, and swap if necessary"
+                    name="Bubble sort" 
+                    worstTimeComplexity="O(n^2)"
                     avgTimeComplexity="O(n^2)"
+                    bestTimeComplexity="O(n^2)"
                     />
                 <AlgorithmCard 
-                    name="Bubble Sort" 
-                    summary="Compare current element to the next element, and swap if necessary"
+                    name="Bubble sort" 
+                    worstTimeComplexity="O(n^2)"
                     avgTimeComplexity="O(n^2)"
+                    bestTimeComplexity="O(n^2)"
                     />
                 <AlgorithmCard 
-                    name="Bubble Sort" 
-                    summary="Compare current element to the next element, and swap if necessary"
+                    name="Bubble sort" 
+                    worstTimeComplexity="O(n^2)"
                     avgTimeComplexity="O(n^2)"
+                    bestTimeComplexity="O(n^2)"
                     />
                 <AlgorithmCard 
-                    name="Bubble Sort" 
-                    summary="Compare current element to the next element, and swap if necessary"
+                    name="Bubble sort" 
+                    worstTimeComplexity="O(n^2)"
                     avgTimeComplexity="O(n^2)"
+                    bestTimeComplexity="O(n^2)"
                     />
             </div>
         </div>
