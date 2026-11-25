@@ -2,8 +2,9 @@
     display: flex;
     align-items: flex-end;
     list-style-type: none;
-    max-width: 40vw;
-    max-height: 80vh;
+    max-width: 40%;
+    max-height: 99%;
+    flex: 1;
 }
 
 .element-bar {

@@ -21,14 +21,14 @@ function ArrayBar({ array = [40, 30, 20, 35, 32, 59, 46, 48], showNumber = true 
         normalizedArray.push(normalizedElement);
     });
 
-    const maximumHeight = 80; // vh
+    const maximumHeight = 99; // %
 
     const elementBar = normalizedArray.map(element =>
                 <li
                     className="element-bar"
                     key={element.key}
                     style={
-                        { height: `${element.normalizedValue * maximumHeight}vh` }
+                        { height: `${element.normalizedValue * maximumHeight}%` }
                     }>
                     
                     {showNumber ? element.value : ""}
