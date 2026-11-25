@@ -1,49 +1,25 @@
 import AlgorithmCard from "./components/AlgorithmCard.jsx";
-import "./AlgorithmSelection.css"
+import algorithms from "../../data/algorithms.json";
+import "./AlgorithmSelection.css";
 
 function AlgorithmSelection() {
+
+    const algorithmListItems = algorithms.map(algorithm =>
+        <li>
+            <AlgorithmCard
+                name={algorithm.name}
+                worstTimeComplexity={algorithm.timeComplexity.worstCase}
+                avgTimeComplexity={algorithm.timeComplexity.averageCase}
+                bestTimeComplexity={algorithm.timeComplexity.bestCase} />
+        </li>
+    );
 
     return (
         <div className="algorithm-selection">
             <h2>Select Algorithm to Visualize</h2>
-            <div className="algorithm-grid">
-                <AlgorithmCard 
-                    name="Bubble sort" 
-                    worstTimeComplexity="O(n^2)"
-                    avgTimeComplexity="O(n^2)"
-                    bestTimeComplexity="O(n^2)"
-                    />
-                <AlgorithmCard 
-                    name="Bubble sort" 
-                    worstTimeComplexity="O(n^2)"
-                    avgTimeComplexity="O(n^2)"
-                    bestTimeComplexity="O(n^2)"
-                    />
-                <AlgorithmCard 
-                    name="Bubble sort" 
-                    worstTimeComplexity="O(n^2)"
-                    avgTimeComplexity="O(n^2)"
-                    bestTimeComplexity="O(n^2)"
-                    />
-                <AlgorithmCard 
-                    name="Bubble sort" 
-                    worstTimeComplexity="O(n^2)"
-                    avgTimeComplexity="O(n^2)"
-                    bestTimeComplexity="O(n^2)"
-                    />
-                <AlgorithmCard 
-                    name="Bubble sort" 
-                    worstTimeComplexity="O(n^2)"
-                    avgTimeComplexity="O(n^2)"
-                    bestTimeComplexity="O(n^2)"
-                    />
-                <AlgorithmCard 
-                    name="Bubble sort" 
-                    worstTimeComplexity="O(n^2)"
-                    avgTimeComplexity="O(n^2)"
-                    bestTimeComplexity="O(n^2)"
-                    />
-            </div>
+            <ul className="algorithm-grid">
+                {algorithmListItems}
+            </ul>
         </div>
     );
 }
