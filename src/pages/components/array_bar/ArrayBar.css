@@ -1,0 +1,15 @@
+.array-bar {
+    display: flex;
+    align-items: flex-end;
+    list-style-type: none;
+    max-width: 40vw;
+    max-height: 80vh;
+}
+
+.element-bar {
+    background-color: var(--primary-color);
+    border: 1.5px solid var(--primary-font-color);
+    flex: 1;
+    text-align: center;
+    color: var(--primary-font-color);
+}

@@ -4,6 +4,7 @@ import SingleVisualization from "./pages/single_visualization/SingleVisualizatio
 import DataEdit from "./pages/data_edit/DataEdit.jsx"
 import AlgorithmComparison from "./pages/algorithm_comparison/AlgorithmComparison.jsx"
 import Page from "./Enums.js"
+import algorithms from "./data/algorithms.json";
 import "./App.css"
 
 function Header({ headerTitle, prevPage }) {
@@ -16,16 +17,24 @@ function Header({ headerTitle, prevPage }) {
 }
 
 function App() {
-  const [currentPage, setCurrentPage] = useState(Page.ALGORITHM_SELECTION);
-  let prevPage = null;
-  let headerTitle = "Sorting Algorithm Visualization";
+  const [currentPage, setCurrentPage] = useState(Page.SINGLE_VISUALIZATION);
+  let prevPage = Page.ALGORITHM_SELECTION;
+  let headerTitle = "Bubble sort";
 
   return (
     <div>
       <Header headerTitle={headerTitle} prevPage={prevPage} />
 
       {currentPage === Page.ALGORITHM_SELECTION && <AlgorithmSelection />}
-      {currentPage === Page.SINGLE_VISUALIZATION && <SingleVisualization />}
+      {currentPage === Page.SINGLE_VISUALIZATION && 
+        <SingleVisualization 
+          name={algorithms[0].name}
+          worstTimeComplexity={algorithms[0].timeComplexity.worstCase}
+          avgTimeComplexity={algorithms[0].timeComplexity.averageCase}
+          bestTimeComplexity={algorithms[0].timeComplexity.bestCase}
+          source={algorithms[0].source}
+        />
+      }
       {currentPage === Page.DATA_EDIT && <DataEdit />}
       {currentPage === Page.ALGORITHM_COMPARISON && <AlgorithmComparison />}
     </div>

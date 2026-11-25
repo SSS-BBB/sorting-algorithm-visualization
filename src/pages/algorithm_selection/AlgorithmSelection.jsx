@@ -7,6 +7,7 @@ function AlgorithmSelection() {
     const algorithmListItems = algorithms.map(algorithm =>
         <li>
             <AlgorithmCard
+                key={algorithm.id}
                 name={algorithm.name}
                 worstTimeComplexity={algorithm.timeComplexity.worstCase}
                 avgTimeComplexity={algorithm.timeComplexity.averageCase}

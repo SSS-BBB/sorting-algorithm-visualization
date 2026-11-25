@@ -1,9 +1,12 @@
+import ArrayBar from "../components/array_bar/ArrayBar.jsx";
 
-function SingleVisualization() {
+function SingleVisualization({ name, worstTimeComplexity, 
+    avgTimeComplexity, bestTimeComplexity,
+    source, sortingFunction=null }) {
     return (
-        <>
-            <h1>Single Visualization</h1>
-        </>
+        <div className="single-visualization">
+            <ArrayBar />
+        </div>
     );
 }
 
