@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./ArrayBar.css";
 
-function ArrayBar({ array = [40, 30, 20, 35, 32, 59, 46, 48], showNumber = true }) {
+function ArrayBar({ array = [40, 30, 20, 35, 32, 59, 46, 48], showNumber = true, showIndex = true }) {
 
     const minElement = Math.min(...array);
     if (minElement <= 0) {
@@ -21,17 +21,17 @@ function ArrayBar({ array = [40, 30, 20, 35, 32, 59, 46, 48], showNumber = true 
         normalizedArray.push(normalizedElement);
     });
 
-    const maximumHeight = 99; // %
+    const maximumHeight = 100; // %
 
-    const elementBar = normalizedArray.map(element =>
-                <li
-                    className="element-bar"
-                    key={element.key}
-                    style={
-                        { height: `${element.normalizedValue * maximumHeight}%` }
-                    }>
-                    
-                    {showNumber ? element.value : ""}
+    const elementBar = normalizedArray.map((element, index) =>
+                <li className="bar-container" key={element.key}>
+                    <div
+                     style={{height: `${element.normalizedValue * maximumHeight}%`}}
+                     className="element-bar">
+                        {showNumber ? element.value : ""}
+                    </div>
+
+                    { showIndex ? index : "" }
 
                 </li>
                 )
