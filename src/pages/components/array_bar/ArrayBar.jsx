@@ -39,6 +39,9 @@ function ArrayBar({ array = [40, 30, 20, 35, 32, 59, 46, 48], showNumber = true,
     return (
         <ul className="array-bar">
             {elementBar}
+            <button className="edit-array-button">
+                Edit Array
+            </button>
         </ul>
     );
 }
