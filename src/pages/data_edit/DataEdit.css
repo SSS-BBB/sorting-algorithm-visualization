@@ -1,0 +1,92 @@
+.data-edit {
+    display: flex;
+    margin-top: 15px;
+    height: 580px;
+}
+
+.data-edit-setting {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    flex: 1;
+    margin-left: 50px;
+}
+
+.data-edit-input-box {
+    display: flex;
+    margin-bottom: 8px;
+    margin-right: 12px;
+    align-items: center;
+}
+
+.data-edit-input-box h5 {
+    margin-right: 8px;
+}
+
+.data-edit-array {
+    flex-direction: column;
+    list-style-type: none;
+    height: 120px;
+    overflow-y: auto;
+}
+
+.data-edit-array li {
+    display: flex;
+    align-items: center;
+}
+
+.data-edit-array span {
+    margin: 0px;
+    font-size: 20px;
+    padding: 2px 30px;
+    border: 1px solid var(--primary-font-color);
+}
+
+.data-edit-index {
+    background-color: var(--secondary-color);
+    color: var(--secondary-font-color);
+}
+
+.data-edit-element {
+    background-color: var(--primary-color);
+    color: var(--primary-font-color);
+}
+
+.data-edit-remove-button {
+    margin-left: 8px;
+    margin-right: 20px;
+    background-color: red;
+    border: none;
+    padding: 5px 14px;
+}
+
+.data-edit-gen-random {
+    background-color: blue;
+    color: white;
+    margin-bottom: 16px;
+}
+
+.data-edit-algo-setting {
+    display: flex;
+    margin-bottom: 8px;
+}
+
+.data-edit-gen-best-and-worst {
+    display: flex;
+}
+
+.data-edit-gen-best {
+    background-color: greenyellow;
+    margin-right: 15px;
+}
+
+.data-edit-gen-worst {
+    background-color: red;
+    color: white;
+}
+
+.data-edit-done {
+    margin-top: 25px;
+    background-color: var(--primary-color);
+}

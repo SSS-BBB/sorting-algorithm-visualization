@@ -17,9 +17,29 @@ function Header({ headerTitle, prevPage }) {
 }
 
 function App() {
-  const [currentPage, setCurrentPage] = useState(Page.SINGLE_VISUALIZATION);
-  let prevPage = Page.ALGORITHM_SELECTION;
-  let headerTitle = "Bubble sort";
+  const [currentPage, setCurrentPage] = useState(Page.DATA_EDIT);
+  let prevPage = Page.SINGLE_VISUALIZATION;
+  let headerTitle = "Data Edit for Bubble sort algorithm";
+
+  const array = [40, 30, 20, 35, 32, 59, 46, 48];
+  const minElement = Math.min(...array);
+    if (minElement <= 0) {
+        console.log("Cannot have element less than or equal to 0 in an array.");
+        return (<></>);
+    }
+
+    const maxElement = Math.max(...array);
+
+    // add key to each element and convert each element to be from 0 to 1 proportional to its value
+    const normalizedArrayTemp = [];
+    array.map((element, index) => {
+        const normalizedElement = {};
+        normalizedElement.key = index;
+        normalizedElement.value = element;
+        normalizedElement.normalizedValue = element / maxElement;
+        normalizedArrayTemp.push(normalizedElement);
+    });
+    const [normalizedArray, setNormalizedArray] = useState(normalizedArrayTemp);
 
   return (
     <div>
@@ -28,14 +48,14 @@ function App() {
       {currentPage === Page.ALGORITHM_SELECTION && <AlgorithmSelection />}
       {currentPage === Page.SINGLE_VISUALIZATION && 
         <SingleVisualization 
-          name={algorithms[0].name}
+          normalizedArray={normalizedArray}
           worstTimeComplexity={algorithms[0].timeComplexity.worstCase}
           avgTimeComplexity={algorithms[0].timeComplexity.averageCase}
           bestTimeComplexity={algorithms[0].timeComplexity.bestCase}
           source={algorithms[0].source}
         />
       }
-      {currentPage === Page.DATA_EDIT && <DataEdit />}
+      {currentPage === Page.DATA_EDIT && <DataEdit normalizedArrayToEdit={normalizedArray} />}
       {currentPage === Page.ALGORITHM_COMPARISON && <AlgorithmComparison />}
     </div>
   );

@@ -10,15 +10,15 @@
     position: relative;
 }
 
-.array-bar:hover {
+.array-bar.show-hover:hover {
     background-color: gray;
 }
 
-.array-bar:hover .bar-container {
+.array-bar.show-hover:hover .bar-container {
     opacity: 0.3;
 }
 
-.array-bar:hover .edit-array-button {
+.array-bar.show-hover:hover .edit-array-button {
     visibility: visible;
 }
 

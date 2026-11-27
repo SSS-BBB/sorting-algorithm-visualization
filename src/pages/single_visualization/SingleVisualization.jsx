@@ -1,12 +1,13 @@
 import ArrayBar from "../components/array_bar/ArrayBar.jsx";
 import "./SingleVisualization.css";
 
-function SingleVisualization({ name, worstTimeComplexity, 
+function SingleVisualization({ normalizedArray, worstTimeComplexity, 
     avgTimeComplexity, bestTimeComplexity,
     source, sortingFunction=null }) {
+
     return (
         <div className="single-visualization">
-            <ArrayBar />
+            <ArrayBar normalizedArray={normalizedArray} />
             <div className="details">
                 <h3 className="detail-heading">Time Complexity</h3>
                 <p>Worst case {worstTimeComplexity}</p>
