@@ -4,6 +4,11 @@ import algorithms from "../../data/algorithms.json";
 import "./DataEdit.css";
 
 function DataEdit({ normalizedArrayToEdit }) {
+
+    function handleElementChange() {
+
+    }
+
     const [array, setArray] = useState(normalizedArrayToEdit);
     
     const algorithmOptions = algorithms.map(algorithm => 
@@ -15,7 +20,7 @@ function DataEdit({ normalizedArrayToEdit }) {
     const arrayItems = array.map((element, index) => 
         <li key={element.key}>
             <span className="data-edit-index">{index}</span>
-            <span className="data-edit-element">{element.value}</span>
+            <input type="number" min={1} className="data-edit-element" value={element.value} onChange={handleElementChange} />
             <button className="data-edit-remove-button" />
         </li>
     );
@@ -26,15 +31,18 @@ function DataEdit({ normalizedArrayToEdit }) {
             <div className="data-edit-setting">
 
                 <div className="data-edit-input-box">
-                    <h5>Array Size (n)</h5>
-                    <input type="number" min="0" />
+                    <h5>Array Size (n) = 8</h5>
                 </div>
 
                 <ul className="data-edit-array">
                     {arrayItems}
                 </ul>
                 
-                <div className="data-edit-input-box">
+                <button className="data-edit-add-element">
+                    Add Element
+                </button>
+
+                <div className="data-edit-input-box center">
                     <div className="data-edit-input-box">
                         <input type="checkbox" />
                         <p>Show Number</p>
@@ -45,9 +53,14 @@ function DataEdit({ normalizedArrayToEdit }) {
                     </div>
                 </div>
 
-                <button className="data-edit-gen-random">
-                    Generate Randomly
-                </button>
+                <div className="data-edit-input-box">
+                    <h5>Size</h5>
+                    <input type="number" className="data-edit-size-input" />
+                    <button className="data-edit-gen-random">
+                        Generate Randomly
+                    </button>
+                </div>
+                
 
                 <div className="data-edit-algo-setting">
                     <div className="data-edit-input-box">

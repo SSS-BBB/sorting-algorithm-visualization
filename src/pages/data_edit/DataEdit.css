@@ -20,6 +20,10 @@
     align-items: center;
 }
 
+.data-edit-input-box.center {
+    align-self: center;
+}
+
 .data-edit-input-box h5 {
     margin-right: 8px;
 }
@@ -29,21 +33,35 @@
     list-style-type: none;
     height: 120px;
     overflow-y: auto;
+    align-self: center;
 }
 
 .data-edit-array li {
     display: flex;
+    justify-content: space-between;
     align-items: center;
+
+    height: 30px;
+    box-sizing: border-box;
 }
 
-.data-edit-array span {
+
+.data-edit-array span, .data-edit-array input {
     margin: 0px;
+    padding: 0px;
     font-size: 20px;
-    padding: 2px 30px;
+    width: 70px;
+    height: 100%;
     border: 1px solid var(--primary-font-color);
+    text-align: center;
+    box-sizing: border-box;
 }
 
 .data-edit-index {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: var(--secondary-color);
     color: var(--secondary-font-color);
 }
@@ -51,6 +69,17 @@
 .data-edit-element {
     background-color: var(--primary-color);
     color: var(--primary-font-color);
+}
+
+/* remove the arrow from number input */
+.data-edit-element::-webkit-outer-spin-button,
+.data-edit-element::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.data-edit-element {
+    appearance: textfield;
 }
 
 .data-edit-remove-button {
@@ -61,10 +90,20 @@
     padding: 5px 14px;
 }
 
+.data-edit-add-element {
+    background-color: green;
+    color: white;
+    align-self: center;
+}
+
+.data-edit-size-input {
+    width: 140px;
+}
+
 .data-edit-gen-random {
     background-color: blue;
     color: white;
-    margin-bottom: 16px;
+    margin-left: 15px;
 }
 
 .data-edit-algo-setting {

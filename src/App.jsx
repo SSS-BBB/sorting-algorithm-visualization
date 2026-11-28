@@ -39,7 +39,7 @@ function App() {
         normalizedElement.normalizedValue = element / maxElement;
         normalizedArrayTemp.push(normalizedElement);
     });
-    const [normalizedArray, setNormalizedArray] = useState(normalizedArrayTemp);
+    const normalizedArray = normalizedArrayTemp;
 
   return (
     <div>
