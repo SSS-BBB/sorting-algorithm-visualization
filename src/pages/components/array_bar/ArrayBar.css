@@ -2,11 +2,10 @@
 .array-bar {
     display: flex;
     list-style-type: none;
-    max-width: 40%;
+    /* max-width: 40%; */
     max-height: 100%;
     flex: 1;
     padding: 0;
-    margin-left: 25px;
     position: relative;
 }
 
@@ -32,6 +31,7 @@
     inset: 0;
     margin: auto;
     width: fit-content;
+    max-width: 100%;
     height: fit-content;
 
     visibility: hidden;

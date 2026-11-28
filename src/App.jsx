@@ -5,6 +5,7 @@ import DataEdit from "./pages/data_edit/DataEdit.jsx"
 import AlgorithmComparison from "./pages/algorithm_comparison/AlgorithmComparison.jsx"
 import Page from "./Enums.js"
 import algorithms from "./data/algorithms.json";
+import randomArrayElement from "./logics/Utils.js";
 import "./App.css"
 
 function Header({ headerTitle, prevPage }) {
@@ -17,11 +18,12 @@ function Header({ headerTitle, prevPage }) {
 }
 
 function App() {
-  const [currentPage, setCurrentPage] = useState(Page.DATA_EDIT);
+  const [currentPage, setCurrentPage] = useState(Page.ALGORITHM_COMPARISON);
   let prevPage = Page.SINGLE_VISUALIZATION;
-  let headerTitle = "Data Edit for Bubble sort algorithm";
+  let headerTitle = "Algorithm Comparison";
 
-  const array = [40, 30, 20, 35, 32, 59, 46, 48];
+  // const array = [40, 30, 20, 35, 32, 59, 46, 48, 50, 68, 79];
+  const array = randomArrayElement(10, 10, 50);
   const minElement = Math.min(...array);
     if (minElement <= 0) {
         console.log("Cannot have element less than or equal to 0 in an array.");
@@ -56,7 +58,7 @@ function App() {
         />
       }
       {currentPage === Page.DATA_EDIT && <DataEdit normalizedArrayToEdit={normalizedArray} />}
-      {currentPage === Page.ALGORITHM_COMPARISON && <AlgorithmComparison />}
+      {currentPage === Page.ALGORITHM_COMPARISON && <AlgorithmComparison normalizedArray={normalizedArray} />}
     </div>
   );
 }

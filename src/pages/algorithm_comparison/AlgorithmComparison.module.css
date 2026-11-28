@@ -1,0 +1,118 @@
+.algorithm-comparison {
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    align-items: center;
+}
+
+.edit-all-button {
+    align-self: flex-end;
+    background-color: var(--secondary-color);
+    color: var(--secondary-font-color);
+}
+
+.compare-container {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-evenly;
+    gap: 50px;
+    padding: 0px;
+    margin-bottom: 25px;
+}
+
+@media (max-width: 1000px) {
+    .compare-container {
+        gap: 25px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .compare-container {
+        gap: 25px;
+        grid-template-columns: 1fr;
+    }
+}
+
+.compare-item {
+    display: flex;
+    height: 250px;
+    justify-content: center;
+    min-width: 250px;
+    width: 300px;
+}
+
+.compare-detail {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    justify-content: center;
+}
+
+.compare-detail p {
+    margin-left: 0px;
+}
+
+.compare-work-count {
+    margin-top: 5px;
+}
+
+.compare-work-count p {
+    margin: auto 0px;
+}
+
+.add-algo-button {
+    background-color: var(--primary-color);
+    color: var(--primary-font-color);
+    margin-bottom: 18px;
+}
+
+.setting {
+    margin-bottom: 8px;
+}
+
+.input-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.input-box p {
+    margin: 0;
+}
+
+.input-box select {
+    margin-left: 8px;
+}
+
+.input-box input[type="number"] {
+    margin: 0px 8px;
+}
+
+.button-container {
+    display: flex;
+}
+
+.button-container button {
+    margin: 0px 8px;
+}
+
+.start-button {
+    background-color: greenyellow;
+}
+
+.pause-button {
+    background-color: var(--secondary-color);
+    color: var(--secondary-font-color);
+}
+
+.reset-button {
+    background-color: red;
+    color: white;
+}
+
+.next-step-button {
+    background-color: blue;
+    color: white;
+}
